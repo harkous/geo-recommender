@@ -209,3 +209,10 @@ Below are some known issues:
 
 * The application needs unit tests. 
 * The redis version should be changed to support loading indices with different sizes at the same time (currently previous indices are overwritten)
+
+     
+## Developer
+[Hamza Harkous](http://hamzaharkous.com)
+
+## License
+[MIT](https://opensource.org/licenses/MIT)
