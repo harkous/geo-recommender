@@ -1,0 +1,41 @@
+<div ng-controller="MapsController">
+
+    <div layout="row">
+        <div flex="66">
+            <leaflet lf-center="user" markers="markers" height="680px" width="100%"></leaflet>
+        </div>
+        <div flex="33">
+            <md-content class="md-padding" style="height:600px;background-color:white">
+                <form name="userForm">
+
+                    <div layout="column" layout-sm="column">
+                        <md-input-container flex>
+                            <label>Latitude</label>
+                            <input ng-model="user.lat" type="number"  ng-change="latChange()" min="-90" max="90" step="any" ng-model-options="{debounce: 1000}">
+                        </md-input-container>
+
+                        <md-input-container flex>
+                            <label>Longitude</label>
+                            <input ng-model="user.lng" type="number" ng-change="lngChange()" min="-180" max="180" step="any" ng-model-options="{debounce: 1000}">
+                        </md-input-container>
+
+                        <md-input-container flex>
+                            <label>Age</label>
+                            <input ng-model="age.val" ng-change="ageChange()"  type="number"  min="20" max="100" step="1" ng-model-options="{debounce: 1000}">
+                        </md-input-container>
+                    </div>
+
+                    <!--<section layout="row" layout-align="center center">-->
+                        <!--<md-button class="md-raised md-accent" ng-click="fetchRecommendations()">-->
+                            <!--Recommend!-->
+                        <!--</md-button>-->
+                    <!--</section>-->
+
+
+                </form>
+            </md-content>
+
+
+        </div>
+    </div>
+</div>
